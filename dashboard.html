@@ -219,19 +219,19 @@
         </div>
 
         <div class="hc-detail">
-            <h3>Ghost accounts (active staff, no login 90+ days) <a class="hc-report-link" href="/report/view/hc_staff_ghost/">Open report &rarr;</a></h3>
+            <h3>Ghost accounts (active staff, no login 90+ days) <a class="hc-report-link" href="/report/hc_staff_ghost/">Open report &rarr;</a></h3>
             <p class="hc-note">Consider deactivating accounts that are no longer needed.</p>
             {% report "hc_staff_ghost" %}
         </div>
 
         <div class="hc-detail">
-            <h3>Superuser accounts <a class="hc-report-link" href="/report/view/hc_staff_superusers/">Open report &rarr;</a></h3>
+            <h3>Superuser accounts <a class="hc-report-link" href="/report/hc_staff_superusers/">Open report &rarr;</a></h3>
             <p class="hc-note">Superusers have unrestricted access. Keep this list minimal.</p>
             {% report "hc_staff_superusers" %}
         </div>
 
         <div class="hc-detail">
-            <h3>Staff without 2FA <a class="hc-report-link" href="/report/view/hc_staff_no2fa/">Open report &rarr;</a></h3>
+            <h3>Staff without 2FA <a class="hc-report-link" href="/report/hc_staff_no2fa/">Open report &rarr;</a></h3>
             <p class="hc-note">Accounts without 2FA are vulnerable to credential attacks.</p>
             {% report "hc_staff_no2fa" %}
         </div>
@@ -245,13 +245,13 @@
 
         <div class="hc-chart-row">
             <div class="hc-chart-half">
-                <h3>Subscription status <a class="hc-report-link" href="/report/view/hc_list_status/">Open report &rarr;</a></h3>
+                <h3>Subscription status <a class="hc-report-link" href="/report/hc_list_status/">Open report &rarr;</a></h3>
                 <div class="google-chart PieChart" style="height: 300px;">
                     {% report "hc_list_status" %}
                 </div>
             </div>
             <div class="hc-chart-half">
-                <h3>Mailbox provider mix <a class="hc-report-link" href="/report/view/hc_list_providers/">Open report &rarr;</a></h3>
+                <h3>Mailbox provider mix <a class="hc-report-link" href="/report/hc_list_providers/">Open report &rarr;</a></h3>
                 <div class="google-chart PieChart" style="height: 300px;">
                     {% report "hc_list_providers" %}
                 </div>
@@ -260,7 +260,7 @@
 
         <div class="hc-chart-row">
             <div class="hc-chart-half">
-                <h3>Subscriber engagement <a class="hc-report-link" href="/report/view/hc_list_inactive/">Open report &rarr;</a></h3>
+                <h3>Subscriber engagement <a class="hc-report-link" href="/report/hc_list_inactive/">Open report &rarr;</a></h3>
                 <div class="google-chart BarChart" style="height: 250px;">
                     {% report "hc_list_inactive" %}
                 </div>
@@ -268,14 +268,14 @@
             <div class="hc-chart-half">
                 <div class="hc-stat-row">
                     <div class="hc-stat-box">
-                        <div class="hc-stat-label">Blocked users <a class="hc-report-link" href="/report/view/hc_list_blocked/">Open &rarr;</a></div>
+                        <div class="hc-stat-label">Blocked users <a class="hc-report-link" href="/report/hc_list_blocked/">Open &rarr;</a></div>
                         <p class="hc-note">Inflate billing with zero deliverability.</p>
                         <div class="hc-stat-value">
                             {% report "hc_list_blocked" %}
                         </div>
                     </div>
                     <div class="hc-stat-box">
-                        <div class="hc-stat-label">Spam trap risk <a class="hc-report-link" href="/report/view/hc_list_spamrisk/">Open &rarr;</a></div>
+                        <div class="hc-stat-label">Spam trap risk <a class="hc-report-link" href="/report/hc_list_spamrisk/">Open &rarr;</a></div>
                         <p class="hc-note">Subscribed, zero engagement 24+ months.</p>
                         <div class="hc-stat-value">
                             {% report "hc_list_spamrisk" %}
@@ -298,7 +298,7 @@
 
         <div class="hc-chart-row">
             <div class="hc-chart-half">
-                <h3>Cancellation reasons (last 90 days) <a class="hc-report-link" href="/report/view/hc_fund_canceled/">Open report &rarr;</a></h3>
+                <h3>Cancellation reasons (last 90 days) <a class="hc-report-link" href="/report/hc_fund_canceled/">Open report &rarr;</a></h3>
                 <div class="google-chart BarChart" style="height: 250px;">
                     {% report "hc_fund_canceled" %}
                 </div>
@@ -306,13 +306,13 @@
         </div>
 
         <div class="hc-detail">
-            <h3>Cards expiring next month <a class="hc-report-link" href="/report/view/hc_fund_expiring/">Open report &rarr;</a></h3>
+            <h3>Cards expiring next month <a class="hc-report-link" href="/report/hc_fund_expiring/">Open report &rarr;</a></h3>
             <p class="hc-note">These donors will churn unless they update their payment info.</p>
             {% report "hc_fund_expiring" %}
         </div>
 
         <div class="hc-detail">
-            <h3>Failed recurring — no other active profile <a class="hc-report-link" href="/report/view/hc_fund_failed/">Open report &rarr;</a></h3>
+            <h3>Failed recurring — no other active profile <a class="hc-report-link" href="/report/hc_fund_failed/">Open report &rarr;</a></h3>
             <p class="hc-note">These donors have completely dropped out of the recurring program.</p>
             {% report "hc_fund_failed" %}
         </div>
@@ -325,19 +325,19 @@
         <h2>Mailing hygiene</h2>
 
         <div class="hc-detail">
-            <h3>Stale drafts (90+ days old) <a class="hc-report-link" href="/report/view/hc_mail_drafts/">Open report &rarr;</a></h3>
+            <h3>Stale drafts (90+ days old) <a class="hc-report-link" href="/report/hc_mail_drafts/">Open report &rarr;</a></h3>
             <p class="hc-note">Old drafts clutter the mailing list and risk accidental sends.</p>
             {% report "hc_mail_drafts" %}
         </div>
 
         <div class="hc-detail">
-            <h3>Sent without a wrapper (last 12 months) <a class="hc-report-link" href="/report/view/hc_mail_nowrap/">Open report &rarr;</a></h3>
+            <h3>Sent without a wrapper (last 12 months) <a class="hc-report-link" href="/report/hc_mail_nowrap/">Open report &rarr;</a></h3>
             <p class="hc-note">Missing wrappers mean no unsubscribe link — potential CAN-SPAM violation.</p>
             {% report "hc_mail_nowrap" %}
         </div>
 
         <div class="hc-detail">
-            <h3>Stopped or died mailings (last 90 days) <a class="hc-report-link" href="/report/view/hc_mail_failed/">Open report &rarr;</a></h3>
+            <h3>Stopped or died mailings (last 90 days) <a class="hc-report-link" href="/report/hc_mail_failed/">Open report &rarr;</a></h3>
             <p class="hc-note">"Died" mailings were killed by AK due to high bounce rates or errors.</p>
             {% report "hc_mail_failed" %}
         </div>
