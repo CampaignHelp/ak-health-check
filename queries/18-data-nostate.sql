@@ -15,5 +15,5 @@
 SELECT FORMAT(COUNT(*), 0) AS missing_state
 FROM core_user u
 WHERE u.subscription_status = 'subscribed'
-  AND (u.state IS NULL OR u.state = '')
-  AND u.zip IS NOT NULL AND u.zip != ''
+  AND COALESCE(u.state, '') = ''
+  AND u.zip > ''

@@ -13,12 +13,11 @@
 -- =================================================================
 
 SELECT FORMAT(COUNT(*), 0) AS spam_risk_users
-FROM core_user u
-JOIN summary_user su ON su.user_id = u.id
+FROM summary_user su
+JOIN core_user u ON u.id = su.user_id
 WHERE u.subscription_status = 'subscribed'
-  AND (su.last_open IS NULL
-       OR su.last_open < DATE_SUB(NOW(), INTERVAL 24 MONTH))
-  AND (su.last_click IS NULL
-       OR su.last_click < DATE_SUB(NOW(), INTERVAL 24 MONTH))
-  AND (su.last_mailing_action IS NULL
-       OR su.last_mailing_action < DATE_SUB(NOW(), INTERVAL 24 MONTH))
+  AND GREATEST(
+      COALESCE(su.last_open, '2000-01-01'),
+      COALESCE(su.last_click, '2000-01-01'),
+      COALESCE(su.last_mailing_action, '2000-01-01')
+  ) < DATE_SUB(NOW(), INTERVAL 24 MONTH)

@@ -12,16 +12,15 @@
 -- =================================================================
 
 SELECT
-    CASE su.mailbox_provider
-        WHEN 'gmail' THEN 'Gmail'
-        WHEN 'ms'    THEN 'Microsoft'
-        WHEN 'vmg'   THEN 'Verizon Media'
-        WHEN 'other' THEN 'Other'
-        ELSE COALESCE(su.mailbox_provider, 'Unknown')
+    CASE
+        WHEN su.mailbox_provider = 'gmail' THEN 'Gmail'
+        WHEN su.mailbox_provider = 'ms'    THEN 'Microsoft'
+        WHEN su.mailbox_provider = 'vmg'   THEN 'Verizon Media'
+        ELSE 'Other'
     END AS provider,
     COUNT(*) AS user_count
-FROM core_user u
-JOIN summary_user su ON su.user_id = u.id
+FROM summary_user su
+JOIN core_user u ON u.id = su.user_id
 WHERE u.subscription_status = 'subscribed'
-GROUP BY su.mailbox_provider
+GROUP BY 1
 ORDER BY user_count DESC
