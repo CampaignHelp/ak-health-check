@@ -83,12 +83,16 @@ Navigate to your new Health Check dashboard from the Reports tab. Review the res
 ```
 queries/              19 individual SQL query reports (see table above)
 dashboard.html        Dashboard HTML template (references queries via {% report %} tags)
-CLAUDE.md             Project docs for development
+install.py            Automated installer via AK REST API
 ```
 
 ## Background
 
 Built by [CampaignHelp](https://campaign.help) from patterns observed across multiple ActionKit instances. Each check addresses a real problem that accumulates silently over time — the kind of thing nobody audits until something breaks.
+
+## See also
+
+**[Stratosphere](https://launchstratosphere.com/)** by Third Bear Solutions — if AK Health Check tells you what's broken, Stratosphere helps you understand what's working. Ongoing dashboards, query builders, and member insights for your ActionKit instance.
 
 ## License
 
