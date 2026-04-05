@@ -4,6 +4,8 @@
 ![Queries: 19](https://img.shields.io/badge/queries-19-blue.svg)
 ![Platform: ActionKit](https://img.shields.io/badge/platform-ActionKit-orange.svg)
 ![SELECT only](https://img.shields.io/badge/SQL-SELECT%20only-brightgreen.svg)
+![Built with Claude](https://img.shields.io/badge/built%20with-Claude-blueviolet.svg)
+![Reviewed by ChatGPT](https://img.shields.io/badge/reviewed%20by-ChatGPT-74aa9c.svg)
 
 A dashboard and set of SQL queries for auditing ActionKit instances. Built for the ActionKit community — free, open source, and designed to run safely on production instances.
 
@@ -93,6 +95,10 @@ Built by [CampaignHelp](https://campaign.help) from patterns observed across mul
 ## See also
 
 **[Stratosphere](https://launchstratosphere.com/)** by Third Bear Solutions — if AK Health Check tells you what's broken, Stratosphere helps you understand what's working. Ongoing dashboards, query builders, and member insights for your ActionKit instance.
+
+## AI disclaimer
+
+This project was built with [Claude](https://claude.ai) and reviewed with [ChatGPT](https://chatgpt.com). All SQL queries were developed using ActionKit's official help documentation as the primary reference. Every query was tested and verified on production-scale data by a human before inclusion.
 
 ## License
 
