@@ -148,6 +148,10 @@
     cursor: pointer;
     user-select: none;
     white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 1px 0 #ddd;
 }
 .hc-detail th:hover {
     background: #e4e4e4;
@@ -414,9 +418,8 @@
                 headers[h].addEventListener('click', function() {
                     var col = parseInt(this.getAttribute('data-col'));
                     var tbody = table.querySelector('tbody') || table;
-                    var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
-                    // Skip header row if no tbody
-                    if (!table.querySelector('tbody')) rows = rows.slice(1);
+                    var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'))
+                        .filter(function(tr) { return tr.querySelector('td'); });
                     var asc = !this.classList.contains('hc-sort-asc');
                     // Clear all sort states
                     var allTh = table.querySelectorAll('th');
